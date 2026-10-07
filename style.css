@@ -1,0 +1,1102 @@
+/* ============================================================
+   EMMANUEL TERGEMINA — PERSONAL WEBSITE
+   ------------------------------------------------------------
+   This stylesheet is deliberately formatted and commented so
+   that it is easy to modify in Sublime Text.
+
+   The most useful settings to change are in the first sections:
+     1. COLORS
+     2. PAGE WIDTH
+     3. TYPOGRAPHY
+     4. SECTION SPACING
+   ============================================================ */
+
+
+/* ============================================================
+   1. COLORS
+   ------------------------------------------------------------
+   Change these variables to recolor the entire website.
+   ============================================================ */
+
+:root {
+    --background: #111513;
+    --background-soft: #161b18;
+    --text: #f1f2ed;
+    --text-secondary: #a5ada7;
+    --accent: #92b398;
+    --accent-bright: #b4d1b8;
+    --border: #303833;
+    --border-light: #3a433d;
+}
+
+
+/* ============================================================
+   2. BASIC RESET
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: Georgia, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+
+/* ============================================================
+   3. PAGE WIDTH
+   ------------------------------------------------------------
+   THIS IS THE MAIN SETTING TO CHANGE IF YOU WANT THE WEBSITE
+   TO APPEAR WIDER OR NARROWER.
+
+   Current maximum width: 1400px
+
+   Examples:
+       1200px = narrower
+       1400px = current
+       1600px = wider
+
+   The 64px creates 32px of space on each side on smaller screens.
+   ============================================================ */
+
+.container {
+    width: min(1400px, calc(100% - 64px));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ============================================================
+   4. NAVIGATION
+   ============================================================ */
+
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navigation {
+    min-height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-bright);
+}
+
+
+/* ============================================================
+   5. HERO / FIRST SCREEN
+   ============================================================ */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 130px;
+    padding-bottom: 80px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(450px, 0.95fr);
+    gap: 5vw;
+    align-items: center;
+}
+
+.eyebrow {
+    margin-bottom: 34px;
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin-bottom: 30px;
+    font-size: clamp(4rem, 6.3vw, 6.8rem);
+    font-weight: 500;
+    line-height: 0.87;
+    letter-spacing: -0.0095em;
+}
+
+.hero-specialties {
+    margin-bottom: 22px;
+    color: var(--text);
+    font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+}
+
+.hero-introduction {
+    max-width: 680px;
+    margin-bottom: 38px;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.hero-links a,
+.text-link,
+.publication-link {
+    color: var(--accent-bright);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.hero-links a:hover,
+.text-link:hover,
+.publication-link:hover {
+    color: var(--text);
+}
+
+
+/* ------------------------------------------------------------
+   HERO CONTACT / PROFESSIONAL PROFILES
+   ------------------------------------------------------------ */
+
+.hero-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 34px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+}
+
+/* Individual profile buttons */
+.profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 13px;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    font-weight: 500;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* All icons inherit the text color */
+.profile-link svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    fill: currentColor;
+}
+
+/* Make the Bluesky butterfly slightly smaller */
+.bluesky-link svg {
+    width: 16px;
+    height: 16px;
+    overflow: visible;
+}
+
+.bluesky-link svg path {
+    transform: scale(0.78);
+    transform-origin: center;
+}
+
+/* The inner ORCID lettering is cut out of the circular icon */
+.profile-link .icon-cutout {
+    fill: var(--background);
+}
+
+.profile-link:hover {
+    color: var(--accent-bright);
+    border-color: var(--accent);
+    background-color: var(--background-soft);
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   6. HERO SCIENTIFIC FIGURE PLACEHOLDER
+   ------------------------------------------------------------
+   Later this can be replaced by an actual plot from your papers.
+   ============================================================ */
+
+.hero-figure {
+    background: white;
+
+    padding: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+/* ============================================================
+   7. GENERAL SECTION LAYOUT
+   ------------------------------------------------------------
+   Change padding-top / padding-bottom if you want sections to
+   be more compact or more spacious.
+   ============================================================ */
+
+.section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-top: 1px solid var(--border);
+}
+
+.section-heading {
+    display: block;
+    margin-bottom: 90px;
+}
+
+.section-heading h2 {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 0;
+    font-size: clamp(2.7rem, 5.2vw, 5.7rem);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+}
+
+.section-number {
+    margin: 5px 0 0;
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.section-label {
+    margin-bottom: 18px;
+    color: var(--text-secondary);
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   8. RESEARCH
+   ============================================================ */
+
+.research-list {
+    margin-left: 130px;
+}
+
+.research-item {
+    display: grid;
+    grid-template-columns: 70px minmax(0, 1fr);
+    gap: 30px;
+    padding: 46px 0;
+    border-top: 1px solid var(--border);
+}
+
+.research-item:last-child {
+    border-bottom: 1px solid var(--border);
+}
+
+.research-index {
+    margin: 4px 0 0;
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+}
+
+.research-item h3 {
+    margin-bottom: 15px;
+    font-size: clamp(1.5rem, 2.3vw, 2.25rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+}
+
+.research-item div > p {
+    max-width: 760px;
+    margin-bottom: 0;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   9. PUBLICATIONS
+   ============================================================ */
+
+.publication-list {
+    margin-left: 130px;
+    margin-bottom: 50px;
+}
+
+.publication {
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 30px;
+    padding: 42px 0;
+    border-top: 1px solid var(--border-light);
+}
+
+.publication:last-child {
+    border-bottom: 1px solid var(--border-light);
+}
+
+.publication-year {
+    margin: 6px 0 0;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+.publication-content h3 {
+    max-width: 950px;
+    margin-bottom: 12px;
+    font-size: clamp(1.35rem, 2vw, 2rem);
+    font-weight: 500;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+}
+
+/* Publication titles link directly to the journal article */
+.publication-content h3 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.publication-content h3 a:hover {
+    color: var(--accent-bright);
+}
+
+
+.journal {
+    margin-bottom: 9px;
+    color: var(--accent-bright);
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.authors {
+    max-width: 900px;
+    margin-bottom: 17px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.authors strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.publication-link {
+    display: inline-block;
+}
+
+.publications-section .text-link {
+    display: inline-block;
+    margin-left: 130px;
+}
+
+
+/* ============================================================
+   10. ABOUT
+   ============================================================ */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 9vw;
+    margin-left: 130px;
+}
+
+.about-lead p {
+    margin-bottom: 0;
+    font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+    line-height: 1.45;
+    letter-spacing: -0.025em;
+}
+
+.about-copy > p {
+    max-width: 680px;
+    color: var(--text-secondary);
+    line-height: 1.85;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 35px;
+}
+
+.skills span {
+    padding: 8px 13px;
+    border: 1px solid var(--border-light);
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+}
+
+
+
+/* ============================================================
+   11. CAREER TIMELINE
+   ------------------------------------------------------------
+   Dates are shown on the left and institutions / positions
+   on the right. Change 180px below to adjust the date column.
+   ============================================================ */
+
+.timeline {
+    margin-top: 90px;
+    margin-left: 130px;
+    border-top: 1px solid var(--border);
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 50px;
+    padding: 38px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.timeline-year {
+    padding-top: 4px;
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.timeline-content h3 {
+    margin-bottom: 4px;
+    font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+    font-weight: 500;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+}
+
+.timeline-location {
+    margin-bottom: 24px;
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+}
+
+.timeline-position {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 720px;
+    padding: 9px 0;
+}
+
+.timeline-position strong {
+    color: var(--text);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.timeline-position span {
+    flex-shrink: 0;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+
+/* ============================================================
+   12. FOOTER
+   ============================================================ */
+
+.site-footer {
+    border-top: 1px solid var(--border);
+}
+
+.footer-content {
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-content p,
+.footer-content a {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+}
+
+.footer-content a:hover {
+    color: var(--accent-bright);
+}
+
+.footer-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-photo {
+    width: 80px;
+    height: auto;
+    max-width: none;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: white;
+    padding: 2px;
+}
+
+/* ============================================================
+   13. TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+
+    .figure-placeholder {
+        max-width: 650px;
+    }
+
+    .research-list,
+    .publication-list,
+    .publications-section .text-link,
+    .about-grid,
+    .timeline {
+        margin-left: 0;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+
+/* ============================================================
+   14. MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    /* Smaller side margins on phones */
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    .navigation {
+        min-height: 72px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 0.72rem;
+    }
+
+    .nav-links a:nth-child(3) {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 140px;
+        padding-bottom: 90px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.7rem, 18vw, 6rem);
+    }
+
+    .plot {
+        height: 270px;
+    }
+
+    .section {
+        padding-top: 95px;
+        padding-bottom: 95px;
+    }
+
+    .section-heading {
+        display: block;
+        margin-left: 130px;
+        margin-bottom: 90px;
+    }
+
+    .research-item {
+        grid-template-columns: 38px minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .publication {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .publication-year {
+        margin-bottom: 5px;
+    }
+
+    /* Career timeline becomes one column on phones */
+    .timeline {
+        margin-top: 65px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 30px 0;
+    }
+
+    .timeline-location {
+        margin-bottom: 18px;
+    }
+
+    .timeline-position {
+        flex-direction: column;
+        gap: 2px;
+        padding: 7px 0;
+    }
+
+    .footer-content {
+        min-height: 90px;
+    }
+}
+
+/* ============================================================
+   15. MULTI-PAGE NAVIGATION
+   ------------------------------------------------------------
+   Highlights the current page in the navigation.
+   Internal pages begin below the absolute-positioned header.
+   ============================================================ */
+
+.nav-links a.active,
+.nav-links a[aria-current="page"] {
+    color: var(--accent-bright);
+}
+
+/* On standalone content pages, leave room for the header. */
+body:not(.home-page) main > .section:first-child {
+    padding-top: 190px;
+}
+
+/* Keep the first section divider below the navigation visually clean. */
+main > .section:first-child {
+    border-top: 0;
+}
+
+@media (max-width: 700px) {
+    body:not(.home-page) main > .section:first-child {
+        padding-top: 130px;
+    }
+
+    /* All three page links remain visible now that they are primary navigation. */
+    .nav-links a:nth-child(3) {
+        display: inline;
+    }
+}
+
+
+/* ============================================================
+   16. HOME — RESEARCH AREAS
+   ------------------------------------------------------------
+   Four large, clickable research cards. Replace the images in
+   /images while keeping the filenames used in index.html, or
+   change the src attributes there.
+   ============================================================ */
+
+.research-areas {
+    padding: 140px 0 150px;
+    background: var(--background-soft);
+    border-top: 1px solid var(--border);
+}
+
+.research-areas-heading {
+    margin-bottom: 70px;
+}
+
+.research-areas-heading h2 {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 0;
+    font-size: clamp(2.7rem, 5.2vw, 5.7rem);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+}
+
+.research-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.research-card {
+    display: block;
+    min-width: 0;
+}
+
+.research-card-image {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.research-card-image img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+
+    background: white;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.research-card-content h3 {
+    margin-bottom: 14px;
+    font-size: clamp(1.55rem, 2.1vw, 2.2rem);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    transition: color 0.2s ease;
+}
+
+.research-card-content p {
+    max-width: 620px;
+    margin-bottom: 18px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+}
+
+.research-card:hover .research-card-image img {
+    transform: scale(1.025);
+}
+
+.research-card:hover h3 {
+    color: var(--accent-bright);
+}
+
+@media (max-width: 700px) {
+    .research-areas {
+        padding: 95px 0;
+    }
+
+    .research-areas-heading {
+        margin-bottom: 55px;
+    }
+
+    .research-card-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+}
+
+/* ============================================================
+   17. RESEARCH DETAIL PAGES
+   ------------------------------------------------------------
+   Shared styling for individual research pages such as
+   functional-genetics.html.
+   ============================================================ */
+
+.research-detail-section {
+    background: var(--background);
+}
+
+.research-detail-soft {
+    background: var(--background-soft);
+}
+
+
+/* ------------------------------------------------------------
+   FULL-SCREEN INTRO / SUMMARY
+   ------------------------------------------------------------ */
+
+/*
+   More specific than the generic standalone-page rule:
+   body:not(.home-page) main > .section:first-child
+*/
+body.research-detail-page main > .research-detail-intro {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding-top: 130px;
+    padding-bottom: 80px;
+    border-top: 0;
+}
+
+.research-detail-heading {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 60px;
+}
+
+.research-detail-heading h1 {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    font-size: clamp(3rem, 5.2vw, 5.7rem);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+}
+
+/* Smaller labels specifically for the individual research pages. */
+.research-detail-page .section-label {
+    margin-bottom: 20px;
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.research-detail-summary {
+    width: 100%;
+    max-width: 1250px;
+}
+
+.research-detail-summary p {
+    margin-bottom: 0;
+    color: var(--text-secondary);
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.research-detail-summary p + p {
+    margin-top: 22px;
+}
+
+
+/* ------------------------------------------------------------
+   ILLUSTRATED RESEARCH SECTIONS
+   ------------------------------------------------------------ */
+
+.research-detail-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+    gap: clamp(60px, 7vw, 120px);
+    align-items: center;
+}
+
+/* Third section: image left, text right. */
+.research-detail-grid-reverse {
+    grid-template-columns: minmax(420px, 1.1fr) minmax(0, 0.9fr);
+}
+
+.research-detail-text {
+    min-width: 0;
+}
+
+.research-detail-text h2 {
+    margin: 0 0 34px;
+    font-size: clamp(2.2rem, 3.6vw, 4rem);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+.research-detail-text p {
+    margin-bottom: 0;
+    color: var(--text-secondary);
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.research-detail-text p + p {
+    margin-top: 22px;
+}
+
+
+/* ------------------------------------------------------------
+   FIGURES
+   ------------------------------------------------------------ */
+
+.research-detail-figure {
+    min-width: 0;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.research-detail-figure img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: contain;
+
+    /* Common appearance for all figures */
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 6px;
+}
+
+.copy-number-figure img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 6px;
+}
+
+
+/* ============================================================
+   RESEARCH DETAIL — TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .research-detail-grid,
+    .research-detail-grid-reverse {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    /* Keep text before its image when sections stack. */
+    .research-detail-grid-reverse .research-detail-text {
+        order: 1;
+    }
+
+    .research-detail-grid-reverse .research-detail-figure {
+        order: 2;
+    }
+
+    .research-detail-figure img {
+        width: auto;
+        max-width: 100%;
+        max-height: 430px;
+    }
+}
+
+
+/* ============================================================
+   RESEARCH DETAIL — MOBILE
+   ============================================================ */
+
+.research-summary-screen {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 700px) {
+
+    body.research-detail-page main > .research-detail-intro {
+        min-height: 100vh;
+        min-height: 100svh;
+        padding-top: 110px;
+        padding-bottom: 70px;
+    }
+
+    .research-detail-heading {
+        margin-bottom: 42px;
+    }
+
+    .research-detail-heading h1 {
+        font-size: clamp(2.7rem, 12vw, 4.2rem);
+    }
+
+    .research-detail-summary p,
+    .research-detail-text p {
+        font-size: 1rem;
+    }
+
+    .research-detail-grid,
+    .research-detail-grid-reverse {
+        gap: 42px;
+    }
+
+    .research-detail-figure img {
+        max-height: 340px;
+    }
+}

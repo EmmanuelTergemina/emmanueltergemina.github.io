@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900"
+ role="img" aria-label="Conceptual network of selected plant nutrient interactions">
+<style>
+.ring { fill:none; stroke:#c8cfca; stroke-width:2; }
+.node { fill:#ffffff; stroke:#a5ada7; stroke-width:2; }
+.label {
+  fill:#111513; font-family:Arial,Helvetica,sans-serif;
+  font-size:27px; font-weight:500; text-anchor:middle;
+  dominant-baseline:middle;
+}
+.positive {
+  fill:none; stroke:#73997b; stroke-width:3.5;
+  stroke-linecap:round; opacity:.88;
+}
+.antagonistic {
+  fill:none; stroke:#b36f69; stroke-width:3.5;
+  stroke-dasharray:10 9; stroke-linecap:round; opacity:.85;
+}
+.context {
+  fill:none; stroke:#8f9892; stroke-width:3;
+  stroke-linecap:round; opacity:.75;
+}
+</style>
+<circle class="ring" cx="450" cy="450" r="315"/>
+
+<path class="positive" d="M450.0,765.0 Q352.4,547.6 135.0,450.0"/>
+<path class="positive" d="M450.0,765.0 Q498.8,632.2 607.5,722.8"/>
+<path class="positive" d="M450.0,765.0 Q401.2,632.2 292.5,722.8"/>
+<path class="positive" d="M450.0,765.0 Q534.6,498.8 722.8,292.5"/>
+<path class="positive" d="M607.5,722.8 Q583.4,485.7 722.8,292.5"/>
+<path class="positive" d="M177.2,607.5 Q365.4,596.5 450.0,765.0"/>
+<path class="positive" d="M722.8,607.5 Q450.0,547.6 177.2,607.5"/>
+<path class="antagonistic" d="M135.0,450.0 Q303.5,534.6 292.5,722.8"/>
+<path class="antagonistic" d="M135.0,450.0 Q436.9,401.2 722.8,292.5"/>
+<path class="antagonistic" d="M722.8,292.5 Q485.7,485.7 292.5,722.8"/>
+<path class="antagonistic" d="M722.8,292.5 Q485.7,316.6 292.5,177.2"/>
+<path class="antagonistic" d="M607.5,177.2 Q596.5,365.4 765.0,450.0"/>
+<path class="antagonistic" d="M177.2,607.5 Q280.9,450.0 177.2,292.5"/>
+<path class="antagonistic" d="M177.2,607.5 Q450.0,450.0 722.8,292.5"/>
+<path class="antagonistic" d="M450.0,135.0 Q498.8,267.8 607.5,177.2"/>
+<path class="antagonistic" d="M450.0,135.0 Q547.6,352.4 765.0,450.0"/>
+<path class="context" d="M450.0,135.0 Q534.6,401.2 722.8,607.5"/>
+<circle class="node" cx="450.0" cy="135.0" r="35"/>
+<text class="label" x="450.0" y="136.0">Ca</text>
+<circle class="node" cx="607.5" cy="177.2" r="35"/>
+<text class="label" x="607.5" y="178.2">K</text>
+<circle class="node" cx="722.8" cy="292.5" r="35"/>
+<text class="label" x="722.8" y="293.5">Fe</text>
+<circle class="node" cx="765.0" cy="450.0" r="35"/>
+<text class="label" x="765.0" y="451.0">Mg</text>
+<circle class="node" cx="722.8" cy="607.5" r="35"/>
+<text class="label" x="722.8" y="608.5">B</text>
+<circle class="node" cx="607.5" cy="722.8" r="35"/>
+<text class="label" x="607.5" y="723.8">S</text>
+<circle class="node" cx="450.0" cy="765.0" r="35"/>
+<text class="label" x="450.0" y="766.0">N</text>
+<circle class="node" cx="292.5" cy="722.8" r="35"/>
+<text class="label" x="292.5" y="723.8">Zn</text>
+<circle class="node" cx="177.2" cy="607.5" r="35"/>
+<text class="label" x="177.2" y="608.5">Mo</text>
+<circle class="node" cx="135.0" cy="450.0" r="35"/>
+<text class="label" x="135.0" y="451.0">P</text>
+<circle class="node" cx="177.2" cy="292.5" r="35"/>
+<text class="label" x="177.2" y="293.5">Cu</text>
+<circle class="node" cx="292.5" cy="177.2" r="35"/>
+<text class="label" x="292.5" y="178.2">Mn</text>
+</svg>

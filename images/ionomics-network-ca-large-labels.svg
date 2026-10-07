@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 702 702">
+  <!-- Generator: Adobe Illustrator 30.8.2, SVG Export Plug-In . SVG Version: 2.1.4 Build 7)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+        stroke: #a5ada7;
+      }
+
+      .st0, .st1 {
+        stroke-width: 2px;
+      }
+
+      .st2 {
+        fill: #111513;
+        font-family: ArialMT, Arial;
+        font-size: 36px;
+      }
+
+      .st2, .st3, .st4, .st5 {
+        isolation: isolate;
+      }
+
+      .st1 {
+        stroke: #c8cfca;
+      }
+
+      .st1, .st3, .st4, .st5 {
+        fill: none;
+      }
+
+      .st3 {
+        opacity: .88;
+        stroke: #73997b;
+      }
+
+      .st3, .st4 {
+        stroke-width: 3.5px;
+      }
+
+      .st3, .st4, .st5 {
+        stroke-linecap: round;
+      }
+
+      .st4 {
+        opacity: .85;
+        stroke: #b36f69;
+        stroke-dasharray: 10 9;
+      }
+
+      .st5 {
+        opacity: .75;
+        stroke: #8f9892;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <circle class="st1" cx="351" cy="351" r="315"/>
+  <path class="st3" d="M351,666c-65.07-144.93-170.07-249.93-315-315"/>
+  <path class="st3" d="M351,666c32.53-88.53,85.03-102.6,157.5-42.2"/>
+  <path class="st3" d="M351,666c-32.53-88.53-85.03-102.6-157.5-42.2"/>
+  <path class="st3" d="M351,666c56.4-177.47,147.33-334.97,272.8-472.5"/>
+  <path class="st3" d="M508.5,623.8c-16.07-158.07,22.37-301.5,115.3-430.3"/>
+  <path class="st3" d="M78.2,508.5c125.47-7.33,216.4,45.17,272.8,157.5"/>
+  <path class="st3" d="M623.8,508.5c-181.87-39.93-363.73-39.93-545.6,0"/>
+  <path class="st4" d="M36,351c112.33,56.4,164.83,147.33,157.5,272.8"/>
+  <path class="st4" d="M36,351c201.27-32.53,397.2-85.03,587.8-157.5"/>
+  <path class="st4" d="M623.8,193.5c-158.07,128.8-301.5,272.23-430.3,430.3"/>
+  <path class="st4" d="M623.8,193.5c-158.07,16.07-301.5-22.37-430.3-115.3"/>
+  <path class="st4" d="M508.5,78.2c-7.33,125.47,45.17,216.4,157.5,272.8"/>
+  <path class="st4" d="M78.2,508.5c69.13-105,69.13-210,0-315"/>
+  <path class="st4" d="M78.2,508.5c181.87-105,363.73-210,545.6-315"/>
+  <path class="st4" d="M351,36c32.53,88.53,85.03,102.6,157.5,42.2"/>
+  <path class="st4" d="M351,36c65.07,144.93,170.07,249.93,315,315"/>
+  <path class="st5" d="M351,36c56.4,177.47,147.33,334.97,272.8,472.5"/>
+  <circle class="st0" cx="351" cy="36" r="35"/>
+  <text class="st2" transform="translate(327.99 37)"><tspan x="0" y="0">Ca</tspan></text>
+  <circle class="st0" cx="508.5" cy="78.2" r="35"/>
+  <text class="st2" transform="translate(496.49 79.2)"><tspan x="0" y="0">K</tspan></text>
+  <circle class="st0" cx="623.8" cy="193.5" r="35"/>
+  <text class="st2" transform="translate(602.79 194.5)"><tspan x="0" y="0">Fe</tspan></text>
+  <circle class="st0" cx="666" cy="351" r="35"/>
+  <text class="st2" transform="translate(641 352)"><tspan x="0" y="0">Mg</tspan></text>
+  <circle class="st0" cx="623.8" cy="508.5" r="35"/>
+  <text class="st2" transform="translate(611.79 509.5)"><tspan x="0" y="0">B</tspan></text>
+  <circle class="st0" cx="508.5" cy="623.8" r="35"/>
+  <text class="st2" transform="translate(496.49 624.8)"><tspan x="0" y="0">S</tspan></text>
+  <circle class="st0" cx="351" cy="666" r="35"/>
+  <text class="st2" transform="translate(338 667)"><tspan x="0" y="0">N</tspan></text>
+  <circle class="st0" cx="193.5" cy="623.8" r="35"/>
+  <text class="st2" transform="translate(172.49 624.8)"><tspan x="0" y="0">Zn</tspan></text>
+  <circle class="st0" cx="78.2" cy="508.5" r="35"/>
+  <text class="st2" transform="translate(53.2 509.5)"><tspan x="0" y="0">Mo</tspan></text>
+  <circle class="st0" cx="36" cy="351" r="35"/>
+  <text class="st2" transform="translate(23.99 352)"><tspan x="0" y="0">P</tspan></text>
+  <circle class="st0" cx="78.2" cy="193.5" r="35"/>
+  <text class="st2" transform="translate(55.19 194.5)"><tspan x="0" y="0">Cu</tspan></text>
+  <circle class="st0" cx="193.5" cy="78.2" r="35"/>
+  <text class="st2" transform="translate(168.5 79.2)"><tspan x="0" y="0">Mn</tspan></text>
+</svg>
