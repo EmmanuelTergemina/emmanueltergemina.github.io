@@ -337,8 +337,8 @@ h3 {
 
 .section-label {
     margin-bottom: 18px;
-    color: var(--text-secondary);
-    font-size: 3rem;
+    color: var(---accent);
+    font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -691,12 +691,12 @@ h3 {
 
     .section-heading {
         display: block;
-        margin-left: 0;
+        margin-left: 0px;
         margin-bottom: 55px;
     }
-
+    
     .section-heading h2 {
-        font-size: clamp(2.4rem, 11vw, 3.2rem);
+        font-size: clamp(2.5rem, 11vw, 3.2rem);
         line-height: 1.05;
     }
 
