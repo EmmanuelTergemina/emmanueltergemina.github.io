@@ -470,10 +470,9 @@ h3 {
    ============================================================ */
 
 .about-grid {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 9vw;
-    margin-left: 130px;
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .about-lead p {
