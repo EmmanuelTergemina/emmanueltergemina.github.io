@@ -338,7 +338,7 @@ h3 {
 .section-label {
     margin-bottom: 18px;
     color: var(--accent);
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -689,6 +689,12 @@ h3 {
         padding-bottom: 95px;
     }
 
+    .section-label {
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    }
+
     .section-heading {
         display: block;
         margin-left: 0px;
@@ -925,7 +931,7 @@ body.research-detail-page main > .research-detail-intro {
 .research-detail-page .section-label {
     margin-bottom: 20px;
     color: var(--accent);
-    font-size: 0.8rem;
+    font-size: 3rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
