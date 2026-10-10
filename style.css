@@ -1002,6 +1002,7 @@ body.research-detail-page main > .research-detail-intro {
     margin: 0;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -1033,6 +1034,22 @@ body.research-detail-page main > .research-detail-intro {
     padding: 6px;
 }
 
+/* Scientific figure captions */
+.research-detail-figure figcaption {
+    width: 100%;
+    max-width: none;
+    margin-top: 18px;
+
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.research-detail-figure figcaption strong {
+    color: var(--text);
+    font-weight: 600;
+}
 
 /* ============================================================
    RESEARCH DETAIL — TABLET
